@@ -1,0 +1,616 @@
+/*↓↓固定↓↓*/
+html{
+  font-size: 14px;
+  font-family: 'Hiragino Kaku Gothic ProN','游明朝','Yu Mincho','YuMincho',serif;
+  color: #000;
+}
+
+*{  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font: 1vw; /*HTMLタグで適用した文字サイズクを基準とした比率で文字サイズを設定する。この場合、1rem=14px*/
+  line-height: 1.8; /*行間指定*/
+  letter-spacing: 0.08em;/*字間指定*/
+  background-color: #DDB84B;
+  background-size: 100% auto,auto ;
+}
+main{
+  align-items:center ;
+ /* width: 1000px;*/
+  margin: 0 auto;/*コンテンツ部分を真ん中に持ってくるための指定。widthを指定した上で、margin:0 auto を指定する。bodyには指定しない。意味ないから*/
+
+}
+
+img {vertical-align: bottom; /*画像の上下方向の隙間を無くすために指定*/
+  width: 100%;
+  height: auto;
+}
+
+li{
+list-style:none; /*箇条書きのマーカー（黒っぽち）を消す*/
+}
+
+ul{
+margin: 0;
+padding: 0;
+}
+
+div{
+  display: block;
+}
+
+/*↑↑ここまで固定↑↑*/
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 20px;
+}
+@media screen and (max-width: 799px) {
+	html{
+		font-size: 12px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	h3{
+		font-size: 16px;
+	}
+  }
+
+
+/* ヘッダー */
+.header {
+	background-color: #008B9C;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+  }
+
+
+  @media screen and (min-width: 800px) {
+	.header {
+	  height: 60px;
+	}
+  }
+
+
+  .header__inner {
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: inherit;
+	position: relative;
+  }
+
+
+  /* ヘッダーのロゴ部分 */
+  .header__title {
+	width: 80px;
+  }
+
+
+  .header__title:hover {
+	opacity: 0.8;
+  }
+
+
+  @media screen and (min-width: 800px) {
+	.header__title {
+	  width: 140px;
+	}
+  }
+
+  .header__title img {
+	display: block;
+	width: 100%;
+	height: 100%;
+  }
+
+  /* ヘッダーのナビ部分 */
+
+  .header__nav {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	transform: translateX(100%);
+	background-color: #008B9C;
+	transition: ease .4s;
+	display: flex;
+  }
+
+
+  @media screen and (min-width: 800px) {
+	.header__nav {
+	  position: static;
+	  transform: initial;
+	  background-color: inherit;
+	  height: inherit;
+	  display: flex;
+	  justify-content: end;
+	  width: 460px;
+	}
+  }
+
+
+  .nav__items {
+	margin: auto;
+  }
+
+  @media screen and (min-width: 800px) {
+	.nav__items {
+	  margin: initial;
+	  width: 100%;
+	  display: flex;
+	  align-items: center;
+	  height: initial;
+	  justify-content: space-between;
+	}
+  }
+
+
+
+
+
+  .nav-items__item {
+	cursor: pointer;
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+  }
+
+  @media screen and (min-width: 800px) {
+
+	.nav-items__item:before {
+	  position: absolute;
+	  content: "";
+	  bottom: -1px;
+	  left: 0;
+	  width: 100%;
+	  height: 4px;
+	  background: #fff;
+	  opacity: 0;
+
+	}
+
+	.nav-items__item:hover:before {
+	  opacity: 1;
+	}
+
+  }
+
+
+
+  /* ナビのリンク */
+  .nav-items__item a {
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 24px;
+  }
+
+  .nav-items__item:last-child a {
+	margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 800px)  {
+	.nav-items__item a {
+	  margin-bottom: 0;
+	  font-size: 18px;
+	}
+  }
+
+
+  /* ハンバーガーメニュー */
+  .header__hamburger {
+	width: 48px;
+	height: 100%;
+  }
+
+  .hamburger {
+	background-color: transparent;
+	border-color: transparent;
+	z-index: 9999;
+	cursor: pointer;
+  }
+
+  @media screen and (min-width: 800px) {
+	.hamburger {
+	  display: none;
+	}
+  }
+
+
+  /* ハンバーガーメニューの線 */
+  .hamburger span {
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	position: relative;
+	transition: ease .4s;
+	display: block;
+  }
+
+  .hamburger span:nth-child(1) {
+	top: 0;
+  }
+
+  .hamburger span:nth-child(2) {
+	margin: 8px 0;
+  }
+
+
+  .hamburger span:nth-child(3) {
+	top: 0;
+  }
+
+
+  /* ハンバーガーメニュークリック後のスタイル */
+  .header__nav.active {
+	transform: translateX(0);
+  }
+
+  .hamburger.active span:nth-child(1) {
+	top: 5px;
+	transform: rotate(45deg);
+  }
+
+
+  .hamburger.active span:nth-child(2) {
+	opacity: 0;
+  }
+
+
+  .hamburger.active span:nth-child(3) {
+	top: -13px;
+	transform: rotate(-45deg);
+  }
+
+
+  .container{
+	text-align: center;
+  }
+
+
+/* メインビジュ*/
+.mainvisual{
+	position: relative;
+  }
+
+.mainvisual img{
+	margin-top: 60px;
+	width: 100%;
+	height: auto;
+	z-index: 100;
+
+  }
+
+  @media screen and (min-width: 800px) {
+	.sp {
+	  display: none;
+	}
+  }
+  @media screen and (max-width: 799px) {
+	.pc {
+	  display: none;
+	}
+  }
+
+
+/* About */
+.about
+{
+	background-color: #000;
+	align-items: center;
+}
+.about-inner
+{
+	position: relative;
+	color: #fff;
+	padding: 100px 30px;
+	text-align: center;
+	z-index: 10;
+}
+
+.about-inner p
+{
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 3em;
+}
+
+.bk-img {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	margin:-60px 0 0 -60px;
+	-webkit-animation:spin 	10s linear infinite;
+	-moz-animation:spin 10s linear infinite;
+	animation:spin 10s linear infinite;
+	z-index: 1;
+}
+.bk1 {
+    top: 140%;
+    left: 70%;
+}
+.bk2 {
+    top: 230%;
+    left: -25%;
+}
+
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+/* コンテンツ */
+.contents
+{
+	position: relative;;
+	max-width: 1300px;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 30px;
+	z-index: 10;
+}
+.content-inner
+{
+	padding: 40px 0;
+}
+
+.table
+{
+	text-align: left;
+}
+.table th
+{
+	font-weight: normal;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+/* introduction ・ profile*/
+.text-box-wrapper
+{
+	flex-shrink: 0;
+	position: relative;
+	max-width: 600px;
+	border-radius: 20px;
+	border: 2px solid #000;
+	background-color: #FFF;
+}
+
+.text-box-wrapper::after {
+	content: " ";
+	position: absolute;
+	right: -15px;
+	bottom: -15px;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	border: 2px solid #000;
+	background-color: #008B9C;
+	z-index: -1;
+}
+
+.text-box-wrapper-inner
+{
+	padding: 20px;
+}
+
+.text-box-wrapper-inner h2
+{
+	color: #fff;
+	background-color: #008B9C;
+	display: inline-block;
+	padding: 0 5px;
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 800px){
+	.introduction
+	{
+		left: 50px;
+		margin-bottom: 80px;
+	}
+	.profile
+	{
+		bottom: 0px;
+		left: 40%;
+	}
+}
+
+/* ギャラリー */
+
+.normal-text-inner h2
+{
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+.gallerie-inner
+{
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+}
+
+.gallerie-inner_text-box
+{
+	width: 80%;
+	padding-right: 20px;
+}
+.gallerie-inner-text
+{
+	padding: 10px 0 30px 0;
+}
+
+.gallerie-img_box-inner
+{
+	padding: 10px 0;
+}
+.gallerie-img
+{
+	max-width: 300px;
+	height: auto;
+}
+
+@media screen and (min-width: 800px){
+	.img_text
+{
+	font-size: 10px;
+}
+}
+.img_text
+{
+	font-size: 8px;
+}
+
+/* event */
+.event-box-wrapper
+{
+	flex-shrink: 0;
+	position: relative;
+	border-radius: 20px;
+	border: 2px solid #000;
+	background-color: #FFF;
+}
+.event-box-wrapper::after {
+	content: " ";
+	position: absolute;
+	right: -15px;
+	bottom: -15px;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	border: 2px solid #000;
+	background-color: #008B9C;
+	z-index: -1;
+}
+@media screen and (min-width: 800px){
+.event-box
+{
+	display: flex;
+}
+.event-box-wrapper-inner
+{
+	padding-right: 20px;
+	width: 60%;
+}
+.event-img_box-inner
+{
+	min-width: 380px;
+}
+}
+.event-box-wrapper-inner h3
+{
+	padding-top: 10px;
+}
+.event-img_box-inner
+{
+	margin: 0 auto;
+	max-width: 400px;
+	padding-top: 10px;
+}
+
+.event-box_2
+{
+	padding-top: 30px;
+	align-items: top;
+}
+.event-detail_box-inner
+{
+	padding-top: 10px;
+}
+
+/* Access */
+.access{
+
+}
+.access-inner
+{
+	display: flex;
+	justify-content: space-between
+}
+.access-inner_address-box
+{
+	min-width: 395px;
+	margin-right: 20px;
+}
+.access-inner_inside_box
+{
+	max-width: 650px;
+}
+.access-img_box-inner
+{
+	padding: 20px;
+}
+
+/* footer */
+.footer
+{
+	background-color: #D9D9D9;
+	text-align: center;
+}
+
+.footer-inner
+{
+	position: relative;;
+	max-width: 1300px;
+	align-items: center;
+	padding: 50px 30px 10px 30px;
+	z-index: 10;
+}
+
+.footer ul img
+{
+	width: 50px;
+	height: auto;
+}
+
+.sns_rink
+{
+	width: 280px;
+	padding-bottom: 38px;
+	margin: 0 auto;
+}
+
+.sns  {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+.footer-text
+{
+	font-size: 12px;
+}
+.copyright
+{
+	padding-top: 10px;
+	font-size: 10px;
+}
