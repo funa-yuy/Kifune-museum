@@ -14,12 +14,22 @@ ham.addEventListener('click', function () {
 
 
 document.getElementById('js-hamburger').addEventListener('click',function() {
-  document.getElementById('js-nav').classList.toggle('active');
- });
+document.getElementById('js-nav').classList.toggle('active');
+});
 
- document.getElementById('rink').addEventListener('click',function() {
-  document.getElementById('js-nav').classList.remove('active');
- });
+document.getElementById('rink').addEventListener('click',function() {
+document.getElementById('js-nav').classList.remove('active');
+});
+
+// ヘッダー登場
+$(window).scroll(function () {           /* スクロールされた時 */
+  var pos = $('.about').offset();          /* mvを過ぎたmainタグの高さを取得して変数[pos]に格納 */
+  if ($(this).scrollTop() > pos.top) {   /* 変数[pos]より、スクロールされていたら */
+    $('header').fadeIn();                /* ヘッダーをふわっと表示 */
+  } else {                               /* それ以外の場合 */
+    $('header').fadeOut();               /* ヘッダーをふわっと非表示 */
+  }
+});
 
 
 //  ページ内リンク　スクロール
