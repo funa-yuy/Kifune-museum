@@ -32,11 +32,11 @@
 
 			<nav class="header__nav nav" id="js-nav">
 			<ul class="nav__items nav-items" id="rink">
-				<li class="nav-items__item" ><a href="http://zokei-csf.com/2023csfes/">Top</a></li>
+				<li class="nav-items__item" ><a href="#top">Top</a></li>
 				<li class="nav-items__item" ><a href="#about">About</a></li>
-				<li class="nav-items__item" ><a  href="#contents">Contents</a></li>
+				<li class="nav-items__item" ><a  href="#gallery">展示場所</a></li>
+				<li class="nav-items__item" ><a  href="#event">Event</a></li>
 				<li class="nav-items__item"  ><a href="#access">Access</a></li>
-			<li class="nav-items__item" ><a  href="#attention">Attention</a></li>
 			</ul>
 			</nav>
 
@@ -49,14 +49,14 @@
 	</header>
 
 	<!--トップページのメインビジュ-->
-	<div class="mainvisual">
+	<div class="mainvisual" id="top">
 		<img src="images/main_pc.png" alt="PCメインビジュ" class="pc">
 
 		<img src="images/mainvisual_sp.png" alt="SPメインビジュ" class="sp">
 
 	</div>
 
-	<section class="about">
+	<section class="about" id="about">
         <div class=" about-inner">
         <p>
 			東京造形大学附属美術館では、2023年に退職を迎えた木船徳光教授の退職記念展を開催いたします。
@@ -104,7 +104,7 @@ CG制作を担当した作品：『機動警察パトレイバー the Movie』�
 </section>
 
 <!--展示場所-->
-<section class="galleries content-inner">
+<section class="galleries content-inner anchor" id="gallery">
 	<div class="art_museum gallerie-inner normal-text-inner">
 		<div class="gallerie-inner_text-box">
 			<h2>美術館</h2>
@@ -237,7 +237,7 @@ CG制作を担当した作品：『機動警察パトレイバー the Movie』�
 </section>
 
 <!-- event -->
-<section class="event content-inner">
+<section class="event content-inner anchor" id="event">
 	<div class="event-box-wrapper">
 	<div class="text-box-wrapper-inner">
 		<div class="event-box event-box_1">
@@ -324,7 +324,7 @@ CG制作を担当した作品：『機動警察パトレイバー the Movie』�
 
 
 <!-- Access -->
-<section class="access content-inner">
+<section class="access content-inner anchor" id="access">
 	<div class="normal-text-inner access-inner">
 		<div class="access-inner_address-box">
 			<h2>Access</h2>
@@ -386,6 +386,10 @@ CG制作を担当した作品：『機動警察パトレイバー the Movie』�
 	</div>
 </div>
 </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 
 </main>
 </body>
