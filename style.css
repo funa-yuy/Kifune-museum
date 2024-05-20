@@ -300,7 +300,7 @@ h3{
 
   }
 
-  @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
 	.sp {
 	  display: none;
 	}
@@ -333,7 +333,11 @@ h3{
 	letter-spacing: 0.1em;
 	line-height: 3em;
 }
-
+main
+{
+	position: relative;
+	overflow-x: hidden;
+}
 .bk-img {
 	position: absolute;
 	width: 600px;
@@ -344,12 +348,23 @@ h3{
 	animation:spin 10s linear infinite;
 	z-index: 1;
 }
+@media screen and (min-width: 800px) {
+	.bk1 {
+		top: 23%;
+		left: 70%;
+	}
+	.bk2 {
+		top: 36%;
+		left: -25%;
+	}
+}
+
 .bk1 {
-    top: 140%;
-    left: 70%;
+    top: 24%;
+    left: 60%;
 }
 .bk2 {
-    top: 230%;
+    top: 35%;
     left: -25%;
 }
 
@@ -403,6 +418,13 @@ h3{
 	background-color: #FFF;
 }
 
+@media screen and (max-width: 799px){
+	.text-box-wrapper
+	{
+		margin: 40px auto;
+	}
+}
+
 .text-box-wrapper::after {
 	content: " ";
 	position: absolute;
@@ -439,12 +461,11 @@ h3{
 	.profile
 	{
 		bottom: 0px;
-		left: 40%;
+		left: 30%;
 	}
 }
 
 /* ギャラリー */
-
 .normal-text-inner h2
 {
 	border-bottom: 1px solid #000;
@@ -455,15 +476,9 @@ h3{
 .gallerie-inner
 {
 	padding: 30px 0;
-	display: flex;
 	align-items: center;
 }
 
-.gallerie-inner_text-box
-{
-	width: 80%;
-	padding-right: 20px;
-}
 .gallerie-inner-text
 {
 	padding: 10px 0 30px 0;
@@ -472,6 +487,7 @@ h3{
 .gallerie-img_box-inner
 {
 	padding: 10px 0;
+	text-align: center;
 }
 .gallerie-img
 {
@@ -480,10 +496,19 @@ h3{
 }
 
 @media screen and (min-width: 800px){
-	.img_text
-{
-	font-size: 10px;
-}
+	.gallerie-inner
+	{
+		display: flex;
+	}
+	.gallerie-inner_text-box
+	{
+		width: 80%;
+		padding-right: 20px;
+	}
+		.img_text
+	{
+		font-size: 10px;
+	}
 }
 .img_text
 {
@@ -548,14 +573,17 @@ h3{
 }
 
 /* Access */
-.access{
+/* .access{
 
+} */
+@media screen and (min-width: 800px){
+	.access-inner
+	{
+		display: flex;
+		justify-content: space-between
+	}
 }
-.access-inner
-{
-	display: flex;
-	justify-content: space-between
-}
+
 .access-inner_address-box
 {
 	min-width: 395px;
@@ -608,6 +636,13 @@ h3{
 .footer-text
 {
 	font-size: 12px;
+}
+@media screen and (max-width: 799px){
+	.footer-text
+	{
+		font-size: 10px;
+	}
+
 }
 .copyright
 {
