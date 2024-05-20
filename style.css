@@ -1,6 +1,6 @@
 /*↓↓固定↓↓*/
 html{
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Hiragino Kaku Gothic ProN','游明朝','Yu Mincho','YuMincho',serif;
   color: #000;
 }
@@ -51,7 +51,7 @@ h3{
 }
 @media screen and (max-width: 799px) {
 	html{
-		font-size: 12px;
+		font-size: 13px;
 	}
 	h2{
 		font-size: 24px;
@@ -59,8 +59,16 @@ h3{
 	h3{
 		font-size: 16px;
 	}
-  }
+}
+a {
+	/* text-decoration: none; */
+	color:inherit
+}
 
+a:hover {
+	text-decoration: underline;
+	color: #008B9C;
+}
 
 /* ヘッダー */
 .header {
@@ -196,6 +204,7 @@ h3{
 
   /* ナビのリンク */
   .nav-items__item a {
+	text-decoration: none;
 	color: #fff;
 	width: 100%;
 	display: block;
@@ -340,23 +349,13 @@ main
 }
 .bk-img {
 	position: absolute;
-	width: 600px;
-	height: 600px;
-	margin:-60px 0 0 -60px;
-	-webkit-animation:spin 	10s linear infinite;
-	-moz-animation:spin 10s linear infinite;
-	animation:spin 10s linear infinite;
+	width: 500px;
+	height: 500px;
+	margin:-50px 0 0 -50px;
+	-webkit-animation:spin 	25s linear infinite;
+	-moz-animation:spin 25s linear infinite;
+	animation:spin 25s linear infinite;
 	z-index: 1;
-}
-@media screen and (min-width: 800px) {
-	.bk1 {
-		top: 23%;
-		left: 70%;
-	}
-	.bk2 {
-		top: 36%;
-		left: -25%;
-	}
 }
 
 .bk1 {
@@ -364,9 +363,28 @@ main
     left: 60%;
 }
 .bk2 {
-    top: 35%;
+    top: 33%;
     left: -25%;
 }
+@media screen and (min-width: 800px) {
+	.bk-img {
+		position: absolute;
+		width: 600px;
+		height: 600px;
+		margin:-60px 0 0 -60px;
+	}
+
+	.bk1 {
+		top: 23%;
+		left: 70%;
+	}
+	.bk2 {
+		top: 35%;
+		left: -11%;
+	}
+}
+
+
 
 @-moz-keyframes spin {
     100% { -moz-transform: rotate(360deg); }
@@ -461,11 +479,60 @@ main
 	.profile
 	{
 		bottom: 0px;
-		left: 30%;
+		margin: 0 0 0 auto;
 	}
 }
 
 /* ギャラリー */
+
+@media screen and (min-width: 800px){
+	.gallerie-inner
+	{
+		display: flex;
+	}
+	.gallerie-inner_text-box
+	{
+		width: 80%;
+		padding-right: 20px;
+	}
+	.gallerie-img_box-inner
+	{
+		text-align: center;
+	}
+	.gallerie-img
+	{
+		max-width: 300px;
+		height: auto;
+	}
+	.img_text
+	{
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 799px){
+	.gallerie-img_box
+	{
+		display: flex;
+		justify-content: center;
+	}
+	.gallerie-img-right
+	{
+		padding-left: 5px;
+	}
+	.gallerie-img-left
+	{
+		padding-right: 5px;
+	}
+	.gallerie-img_box img
+	{
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		max-height: 300px;
+	}
+}
+
 .normal-text-inner h2
 {
 	border-bottom: 1px solid #000;
@@ -476,7 +543,7 @@ main
 .gallerie-inner
 {
 	padding: 30px 0;
-	align-items: center;
+	align-items: start;
 }
 
 .gallerie-inner-text
@@ -489,31 +556,14 @@ main
 	padding: 10px 0;
 	text-align: center;
 }
-.gallerie-img
-{
-	max-width: 300px;
-	height: auto;
-}
 
-@media screen and (min-width: 800px){
-	.gallerie-inner
-	{
-		display: flex;
-	}
-	.gallerie-inner_text-box
-	{
-		width: 80%;
-		padding-right: 20px;
-	}
-		.img_text
-	{
-		font-size: 10px;
-	}
-}
 .img_text
 {
 	font-size: 8px;
 }
+
+
+
 
 /* event */
 .event-box-wrapper
@@ -537,19 +587,19 @@ main
 	z-index: -1;
 }
 @media screen and (min-width: 800px){
-.event-box
-{
-	display: flex;
-}
-.event-box-wrapper-inner
-{
-	padding-right: 20px;
-	width: 60%;
-}
-.event-img_box-inner
-{
-	min-width: 380px;
-}
+	.event-box_1
+	{
+		display: flex;
+	}
+	.event-box-wrapper-inner_1
+	{
+		padding-right: 20px;
+		width: 60%;
+	}
+	.event-img_box-inner
+	{
+		min-width: 380px;
+	}
 }
 .event-box-wrapper-inner h3
 {
@@ -589,6 +639,13 @@ main
 	min-width: 395px;
 	margin-right: 20px;
 }
+@media screen and (max-width: 799px){
+	.access-inner_inside_box
+	{
+		padding-top: 30px;
+	}
+
+}
 .access-inner_inside_box
 {
 	max-width: 650px;
@@ -625,6 +682,7 @@ main
 	width: 280px;
 	padding-bottom: 38px;
 	margin: 0 auto;
+	font-size: 14px;
 }
 
 .sns  {
