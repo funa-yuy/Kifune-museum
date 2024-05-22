@@ -1,5 +1,5 @@
-// ハンバーガーメニュー
 
+// ハンバーガーメニュー
 const ham = document.querySelector('#js-hamburger');
 const nav = document.querySelector('#js-nav');
 
