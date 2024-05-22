@@ -1,7 +1,9 @@
 /*↓↓固定↓↓*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
 html{
   font-size: 16px;
-  font-family: 'Hiragino Kaku Gothic ProN','游明朝','Yu Mincho','YuMincho',serif;
+  font-family: 'Noto sans','Hiragino Kaku Gothic ProN','游明朝','Yu Mincho','YuMincho',serif;
   color: #000;
 }
 
@@ -197,6 +199,9 @@ a:hover {
 	.nav-items__item a {
 	  margin-bottom: 0;
 	  font-size: 18px;
+	}
+	.nav-items__item a:hover {
+		text-decoration: none;
 	}
   }
 
@@ -650,7 +655,7 @@ main
 
 .footer ul img
 {
-	width: 50px;
+	max-width: 45px;
 	height: auto;
 }
 
@@ -665,7 +670,7 @@ main
 .sns  {
 	display: flex;
 	justify-content: space-between;
-	width: 260px;
+	width: 200px;
 	padding-top: 20px;
 }
 .footer-text
