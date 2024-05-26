@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>木船徳光退職記念展</title>
+	<title>船徳光退職記念展/Photo</title>
 	<link rel="stylesheet" href="./style.css">
 
 	<meta property="og:url" content="./index.html">
@@ -15,6 +15,14 @@
 	<!-- Twitterカードの設定 -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<!--  <meta name="twitter:site" content="(9)Twitterアカウント名" />-->
+
+	<!-- 画像ポップアップ用 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script></scrip>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<!--/slider用-->
+	<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
 <main>
@@ -23,15 +31,15 @@
 	<header class="header">
 		<div class="header__inner">
 			<nav class="header__nav nav" id="js-nav">
-			<ul class="nav__items nav-items" id="rink">
-				<li class="nav-items__item" ><a href="#top">Top</a></li>
-				<li class="nav-items__item" ><a href="#about">About</a></li>
-				<li class="nav-items__item" ><a  href="#gallery">展示場所</a></li>
-				<li class="nav-items__item" ><a  href="#event">Event</a></li>
-				<li class="nav-items__item"  ><a href="#access">Access</a></li>
-			</ul>
+				<ul class="nav__items nav-items" id="rink">
+					<li class="nav-items__item" ><a href="index.html#top">Top</a></li>
+					<li class="nav-items__item" ><a href="index.html#about">About</a></li>
+					<li class="nav-items__item" ><a  href="index.html#gallery">展示場所</a></li>
+					<li class="nav-items__item" ><a  href="index.html#event">Event</a></li>
+					<li class="nav-items__item" ><a  href="index.html#photo-slider">Photo</a></li>
+					<li class="nav-items__item"  ><a href="index.html#access">Access</a></li>
+				</ul>
 			</nav>
-
 			<button class="header__hamburger hamburger" id="js-hamburger">
 				<span></span>
 				<span></span>
@@ -243,6 +251,25 @@
 </div>
 </section>
 
+<!-- photo -->
+<section class="photo-slider content-inner anchor" id="photo-slider">
+	<div class="slider">
+		<!--/slider-->
+		<ul class="slider-inner">
+			<li><img src="images/art_museum-1.jpg" alt=""></li>
+			<li><img src="images/art_museum-2.jpg" alt=""></li>
+			<li><img src="images/cs_gallery-1.jpg" alt=""></li>
+			<li><img src="images/cs_gallery-2.jpg" alt=""></li>
+			<li><img src="images/zokei_gallery-1.png" alt=""></li>
+			<li><img src="images/event.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="photo_more-button">
+	<a href="./index-2.html" class="more-button">
+		<button type="button">more ▶︎</button>
+	</a>
+	</div>
+</section>
 
 <!-- Access -->
 <section class="access content-inner anchor" id="access">
@@ -309,8 +336,12 @@
 </footer>
 
 
+<!--/slider用-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- ハンバーガーメニュー用 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+	<script src="main.js"></script>
 
 </main>
 </body>
