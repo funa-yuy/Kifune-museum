@@ -615,7 +615,7 @@ main
 
 .slider-inner img {
 	 width:auto;/*スライダー内の画像を横幅100%に*/
-	 max-height:200px;
+	 max-height:185px;
 	 margin: 0 auto;
 }
 
